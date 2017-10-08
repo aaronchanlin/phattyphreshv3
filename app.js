@@ -17,7 +17,7 @@ app.listen(port, function () {
 app.post('/rap', function (req, res, next) {
   var userName = req.body.user_name;
   var botPayload = {
-    text : 'We are Phat & Fire. About to spit some fire beats'
+    text : 'We are Phat & Phresh. About to spit some fire beats'
   };
 
 app.post('/fire', function (req, res, next) {
