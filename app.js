@@ -4,14 +4,6 @@ var bodyParser = require('body-parser');
 var app = express();
 var port = process.env.PORT || 1337;
 
-{
-    "name": "PhattyPhresh",
-    "description": "Alexa spits bars",
-    "repository": "https://github.com/aaronchanlin/phattyphresh",
-    "logo": "http://pathToYourLogo.png",
-    "keywords": ["iconic", "fire", "alexa"]
-}
-
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
