@@ -10,6 +10,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // test route
 app.get('/', function (req, res) { res.status(200).send('Hello world!'); });
 
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
 
 app.listen(port, function () {
   console.log('Listening on port ' + port);
@@ -18,7 +25,7 @@ app.listen(port, function () {
 app.post('/rap', function (req, res, next) {
   var userName = req.body.user_name;
   var botPayload = {
-    text : 'http://phatandphresh.azurewebsites.net/api/phresh?verses=<num_verses>'
+    text : httpGet(phatandphresh.azurewebsites.net/api/phresh?verses=<1>);
   };
 
   // Loop otherwise..
