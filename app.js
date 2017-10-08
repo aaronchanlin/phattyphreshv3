@@ -20,13 +20,6 @@ app.post('/rap', function (req, res, next) {
     text : 'We are Phat & Phresh. About to spit some fire beats'
   };
 
-app.post('/fire', function (req, res, next) {
-    var userName = req.body.user_name;
-    var botPayload = {
-      text : 'Fire fire fire'
-    };
-
-
   // Loop otherwise..
   if (userName !== 'slackbot') {
     return res.status(200).json(botPayload);
